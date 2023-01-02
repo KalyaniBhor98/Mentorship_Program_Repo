@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <script language="javascript">
+        function arm()
+        {
+            var arm = 0, rem, num;
+            num = Number(document.getElementById("input").value);
+            result = document.getElementById("result");
+            temp = num;
+            while (temp > 0) {
+                rem = temp % 10;
+                arm = arm + rem * rem * rem;
+                temp = Math.floor(temp / 10); // convert float into Integer
+
+            }
+            if (arm === num) {
+                result.innerHTML = "Given no is a Armstrong number";
+            }
+            else {
+                result.innerHTML = "Given no is not an Armstrong number";
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="pink">
+    <h1>ARMSTRONG NUMBER</h1>
+    Enter Number: <br>
+    <input type="text" id="input"><br><br>
+    <button onclick="arm()" style="color:white;
+background-color:green; width:145px;">Check</button></br></br>
+    <div id="result"></div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Palindrome</title>
+  <script language="Javascript">
+    function palindrome() {
+      var word = document.getElementById("name").value;
+      var result = document.getElementById("result");
+      var reversed = '';
+      for (var i = 0; i < word.length; i++) {
+        reversed = word[i] + reversed;
+      }
+      if (word == reversed) {
+        result.innerHTML = "It is a palindrome";
+      }
+      else {
+        result.innerHTML = "It's not a palindrome";
+      }
+    }
+  </script>
+</head>
+
+<body bgcolor="pink">
+  Name:<br><input type="text" id="name" /><br><br>
+  <input type="button" name="Check" value="Check" style="color:white;
+background-color:green; width:145px;" onclick="palindrome()"><br><br>
+  <div id="result">Result</div>
+
+</body>
+
+</html>

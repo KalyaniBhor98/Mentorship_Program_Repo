@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+    <script language="javascript">
+        function even_odd() {
+            var num;
+            num = Number(document.getElementById("no").value);
+            var result = document.getElementById("result");
+            if (num % 2 == 0) {
+                result.innerHTML = "Even Number";
+            }
+            else {
+                result.innerHTML = "Odd Number";
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="aqua">
+    <h1>EVEN AND ODD NUMBER</h1>
+    Enter Number:<br>
+    <input type="text" id="no"><br><br>
+    <button onclick="even_odd()" style="color:white;
+background-color:green; width:145px;">Check</button>
+    <div id="result"></div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <script language="javascript">
+        function rev()
+        {
+            var rem, no, temp = 0;
+
+            no = Number(document.getElementById("rev").value);
+            result = document.getElementById("result");
+            while (no > 0) 
+            {
+                rem = no % 10;
+                no = Math.floor(no / 10);
+                temp = temp * 10 + rem;
+            }
+            result.innerHTML = "the reverse of given no is:" + temp;
+        }
+    </script>
+</head>
+
+<body bgcolor="aquamarine">
+    <h1>REVERSE </h1>
+    Enter Number:<br>
+    <input type=text id="rev"><br><br>
+    <button onclick="rev()" style="color:white;
+background-color:rgb(255, 192, 192); width:145px;">Reverse</button></br></br>
+    <div id="result"></div>
+</body>
+
+</html>

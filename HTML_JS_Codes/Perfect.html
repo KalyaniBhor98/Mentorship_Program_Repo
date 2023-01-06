@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script language="javascript">
+		function perfect()
+		{
+			var number, remainder, addition = 0, i;
+			number = Number(document.getElementById("txt").value);
+			result = document.getElementById("result");
+
+			for (i = 0; i < number; i++)
+			{
+				remainder = number % i;
+				if (remainder == 0) 
+				{
+					addition += i;
+				}
+			}
+			if (addition === number) 
+			{
+				result.innerHTML = "The given number is Perfect number";
+			}
+			else
+			{
+				result.innerHTML = "The given number is not a Perfect number";
+			}
+		}
+	</script>
+</head>
+
+<body bgcolor="violet">
+	<h1>PERFECT NUMBER</h1>
+
+	Enter Number :<br>
+	<input type="text" id="txt" />
+	<br><br>
+	<button onClick="perfect()" style="color:white;
+background-color:rgb(0, 66, 128); width:145px;">CHECK</button>
+	<div id="result"></div>
+</body>
+
+</html>

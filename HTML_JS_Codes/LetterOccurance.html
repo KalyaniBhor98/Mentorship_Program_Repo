@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Occurance</title>
+	<script language="Javascript">
+		function find() {
+			var str = document.getElementById("txtstr").value;
+			var src = document.getElementById("txtsrc").value;
+			var result = document.getElementById("result");
+			var i = 0, cnt = 0;
+			while (true) {
+				var i = str.indexOf(src);
+				if (i >= 0) {
+					cnt++;
+					str = str.substring(i + 1);
+					console.log(str);
+				}
+				else {
+					break;
+				}
+			}
+			result.innerHTML = "Char " + src + " found " + cnt + " times.";
+		}
+	</script>
+</head>
+
+<body bgcolor="pink">
+	Name:<br><input type="text" id='txtstr'><br>
+	<br> Letter:<br><input type="text" id='txtsrc'><br>
+	<br> <input type="button" name="btcnt" value="Check" onclick="find()" style="color:white;
+background-color:green; width:145px;"><br>
+	<div id="result"> Result </div>
+</body>
+
+</html>

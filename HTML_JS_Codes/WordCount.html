@@ -1,0 +1,31 @@
+<html>
+
+<head>
+   <script language="javascript">
+
+      function WordCount() {
+         var str = document.getElementById("name").value;
+         var word = document.getElementById("word").value;
+         var result = document.getElementById("result")
+         var indx = str.indexOf(word);
+         var count = 0;
+         while (indx != -1) {
+            count++;
+            indx = str.indexOf(word, indx + 1);
+         }
+         result.innerHTML = "count of word " + word + " in String " + str + " is" + count;
+      } 
+   </script>
+</head>
+
+<body bgcolor="aqua">
+   <h1>COUNT OF WORDS</h1>
+   Name:<br><input type="text" id="name" /><br><br>
+   Word:<br><input type="text" id="word" /><br><br>
+   <input type="button" name="Check" value="Check" onclick="WordCount()" style="color:white;
+background-color:green; width:145px;"><br><br>
+   <div id="result"></div>
+   </form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Reverse</title>
+    <script language="javascript">
+        function reverseWord() {
+            var str = document.getElementById("name").value;
+            var result = document.getElementById("result");
+            var rev= str.split("").reverse().join("").split(" ").reverse().join(" ");  
+            result.innerHTML = rev;
+        }
+    </script>
+</head>
+
+<body bgcolor="pink">
+    <form>
+        <h1>Reverse each word in String</h1>
+        Name:<br><input type="text" id="name"  /><br><br>
+        <input type="button" name="Reverse" value="Reverse" onclick='reverseWord()' style="color:white;
+background-color:green; width:170px;"><br><br>
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>
